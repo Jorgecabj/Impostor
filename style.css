@@ -88,3 +88,21 @@ button.danger {
 .oculto {
   display: none;
 }
+
+/* REEMPLAZA las reglas que agregaste anteriormente con esto: */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  width: 100%;
+  max-width: 420px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
