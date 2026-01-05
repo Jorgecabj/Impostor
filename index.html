@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juego del Impostor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🕵️ Juego del Impostor</h1>
+
+<!-- PANTALLA CARGA -->
+<section id="pantallaCarga" class="pantalla">
+  <div id="bloqueAgregar">
+    <input id="nombre" placeholder="Nombre del jugador">
+    <button onclick="agregarJugador()">Agregar jugador</button>
+  </div>
+
+  <div id="gridJugadores" class="grid"></div>
+
+  <button class="principal" onclick="prepararJuego()">Preparar juego</button>
+</section>
+
+<!-- PANTALLA ROL -->
+<section id="pantallaRol" class="pantalla oculto">
+  <h2 id="nombreJugador"></h2>
+  <div class="cardRol">
+    <p id="textoRol"></p>
+  </div>
+  <button class="principal" onclick="confirmarJugador()">Confirmar</button>
+</section>
+
+<!-- PANTALLA JUEGO -->
+<section id="pantallaJuego" class="pantalla oculto">
+  <h2 id="empieza"></h2>
+  <p class="timer">⏱️ <span id="timer">0</span> s</p>
+
+  <button class="danger" onclick="revelarImpostor()">Revelar impostor</button>
+
+  <div id="opcionesFinal" class="oculto">
+    <button class="principal" onclick="volverAJugar()">🔄 Volver a jugar</button>
+    <button onclick="reiniciarTodo()">🔁 Reiniciar todo</button>
+  </div>
+</section>
+
+<script src="script.js" defer></script>
+</body>
+</html>
+
